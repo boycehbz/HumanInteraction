@@ -1,0 +1,41 @@
+# experiment name
+note: eval_interhuman_diffusion
+
+#project basic
+task: reconstruction  # interVAE reconstruction
+
+#model basic
+gpu_index: 0
+lr: 0.0001
+batchsize: 32
+epoch: 2000
+worker: 0
+use_sch: True
+model_type: smpl
+
+#********dataset*********#
+# The path for datasets and annotations
+data_folder: data/dataset
+
+trainset: Hi4D
+testset: Hi4D
+
+model: interhuman_diffusion_phys
+use_prior: False
+
+mode: test # train/test/eval
+
+
+# Use pretrain model and the corresponding path
+pretrain: True
+pretrain_dir: data/checkpoint_non_phys.pkl
+
+
+# The name of your training loss function
+# Split different names with a single space
+# e.g., KL_Loss MPJPE L1 L2
+train_loss: SMPL_Loss Keyp_Loss Mesh_Loss Joint_Loss Vel_Loss 
+test_loss: MPJPE_instance #MPJPE #MPJPE PCK PA_MPJPE MPJPE_H36M
+
+#visualize
+viz: False

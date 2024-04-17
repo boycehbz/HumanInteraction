@@ -6,6 +6,17 @@ __pycache__/
 # C extensions
 *.so
 
+data/dataset
+data/smpl/SMPL_FEMALE.pkl
+data/smpl/SMPL_MALE.pkl
+data/smpl/SMPL_NEUTRAL.pkl
+data/smpl/SMPLX_FEMALE.pkl
+data/smpl/SMPLX_MALE.pkl
+data/smpl/SMPLX_NEUTRAL.pkl
+data/*.pkl
+
+output/
+
 # Distribution / packaging
 .Python
 build/
