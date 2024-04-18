@@ -2,7 +2,7 @@
 
 The code for CVPR 2024 paper "Closely Interactive Human Reconstruction with Proxemics and Physics-Guided Adaption"<br>
 [Buzhen Huang](http://www.buzhenhuang.com/), [Chen Li](https://chaneyddtt.github.io/), [Chongyang Xu](https://openreview.net/profile?id=~Chongyang_Xu1), [Liang Pan](https://liangpan99.github.io/), [Yangang Wang](https://www.yangangwang.com/), [Gim Hee Lee](https://www.comp.nus.edu.sg/~leegh/)<br>
-\[[Paper](http://www.buzhenhuang.com/)\]
+\[[Paper](https://arxiv.org/abs/2404.11291)\]
 
 ![figure](assets/pipeline.jpg)
 
