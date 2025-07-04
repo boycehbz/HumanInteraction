@@ -41,11 +41,17 @@ python train.py --config cfg_files/config.yaml
 
 ## Evaluation
 **Step1:**<br>
-Download checkpoint file from [Baidu Netdisk](https://pan.baidu.com/s/1K-LUYDQVrniyoF1VO3xiOA?pwd=7vpt) or [Google Drive](https://drive.google.com/file/d/12mFnSg5CkG-HhsPLUQ4FL6F-xbl8hA-U/view?usp=sharing). You may also require [SDF loss](https://github.com/penincillin/SDF_ihmr) for evaluating penetration.
+Download checkpoint file from [Baidu Netdisk](https://pan.baidu.com/s/1TGs2Gb9C4qVlC_ScoLjgiA?pwd=tsrn) or [Google Drive](https://drive.google.com/file/d/1AJOqOUzDgiKPA3Q-E41GjNe3hSu0xcbt/view?usp=drive_link). You may also require [SDF loss](https://github.com/penincillin/SDF_ihmr) for evaluating penetration.
 
 **Step2:**<br>
 ```bash
 python eval.py --config cfg_files/eval.yaml
+```
+
+## Demo
+Download ```demo_models``` from [Baidu Netdisk](https://pan.baidu.com/s/1RlyFa9UUmsm1-qH-zS-EOg?pwd=2wjs) and place them in ```data```. Then, compile roi_align from [Alphapose](https://github.com/MVIG-SJTU/AlphaPose).
+```bash
+python demo.py
 ```
 
 ## Citation
