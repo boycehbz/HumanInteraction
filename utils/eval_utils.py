@@ -63,6 +63,7 @@ class HumanEval(nn.Module):
         self.J_regressor_LSP = np.load('data/smpl/J_regressor_lsp.npy').astype(np.float32)
         self.J_regressor_halpe = np.load('data/smpl/J_regressor_halpe.npy').astype(np.float32)
         self.J_regressor_SMPL = self.neutral_smpl.J_regressor.clone().cpu().detach().numpy()
+        self.halpe2lsp = [16,14,12,11,13,15,10,8,6,5,7,9,18,17]
 
         self.eval_handler_mapper = dict(
             Hi4D=self.LSPEvalHandler,
@@ -428,7 +429,8 @@ class HumanEval(nn.Module):
                 joints = premesh[:,:,:3]
                 conf = premesh[:,:,-1]
         else:
-            joints = np.matmul(self.J_regressor_LSP, premesh)
+            joints = np.matmul(self.J_regressor_halpe, premesh)
+            joints = joints[:,self.halpe2lsp]
             conf = None
 
         joints = joints * 1000
@@ -547,7 +549,8 @@ class HumanEval(nn.Module):
                 v = valid[:,idx]
 
                 pred_mesh, _ = self.neutral_smpl(p_shape, p_pose, p_trans)
-                gt_mesh, gt_joint = smpl_model(g_shape, g_pose, g_trans, lsp=True)
+                gt_mesh, gt_joint = smpl_model(g_shape, g_pose, g_trans, halpe=True)
+                gt_joint = gt_joint[:,self.halpe2lsp]
 
                 pred_mesh = pred_mesh.detach().cpu().numpy()
                 gt_mesh = gt_mesh.detach().cpu().numpy()
