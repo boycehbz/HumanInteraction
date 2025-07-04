@@ -1,8 +1,0 @@
-mobile-sam @ git+https://github.com/ChaoningZhang/MobileSAM.git
-numpy==1.23.1
-opencv-python>=4.1.1
-pandas==1.4.3
-Pillow>=7.1.2
-scikit-image==0.19.3
-timm==0.9.12
-ultralytics
