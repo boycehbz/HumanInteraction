@@ -19,7 +19,7 @@ from utils.cyclic_scheduler import CyclicLRWithRestarts
 from datasets.reconstruction_feature_data import Reconstruction_Feature_Data
 from datasets.eval_dataset import Reconstruction_Eval_Data
 from utils.smpl_torch_batch import SMPLModel, SMPLXModel
-from utils.renderer_pyrd import Renderer
+from utils.renderer_moderngl import Renderer
 import cv2
 from copy import deepcopy
 from utils.imutils import joint_projection
