@@ -20,7 +20,7 @@ Download the official SMPL model from [SMPL](https://smpl.is.tue.mpg.de/) and [S
 
 ## Training on Hi4D
 **Step1:**<br>
-Following other video-based methods, we extract image features as network input for training efficiency. The preprocessed annotations can be obtained from [Baidu Netdisk](https://pan.baidu.com/s/1s4NTmavBt40nLqGTTuo4gA?pwd=vcvf) or [Google Drive](https://drive.google.com/drive/folders/116o5XtyTsaCKCkHsX0oZxOxI462jJMGB?usp=sharing). You should also download original images from [Hi4D website](https://yifeiyin04.github.io/Hi4D/#dataset). The folder structure is shown as follows:
+Following other video-based methods, we extract image features as network input for training efficiency. The preprocessed annotations can be obtained from [Baidu Netdisk](https://pan.baidu.com/s/1ZyFYYSdfdzj7tnViihia4w?pwd=qusc) or [Google Drive](https://drive.google.com/drive/folders/116o5XtyTsaCKCkHsX0oZxOxI462jJMGB?usp=sharing). You should also download original images from [Hi4D website](https://yifeiyin04.github.io/Hi4D/#dataset). The folder structure is shown as follows:
 ```
 ./data
 ├── dataset
